@@ -1,5 +1,5 @@
-#include <pl.hpp>
 #include <iostream>
+#include <pl.hpp>
 
 struct Item {
   int id;
@@ -7,16 +7,10 @@ struct Item {
 
 int main() {
   // Define a simple declarative list
-  auto items = pl(Item, {
-    {1},
-    {2},
-    {3}
-  });
+  auto items = pl(Item, {{1}, {2}, {3}});
 
   // Iterate through the entries
-  for (const auto& item : items.get_entries()) {
-    std::cout << item.id << "\n";
-  }
+  for (const auto& item : items.get_entries()) { std::cout << item.id << "\n"; }
 
   return 0;
 }

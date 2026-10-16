@@ -11,10 +11,10 @@
 #endif
 
 #ifndef PL_HPP
-#define PL_HPP
+  #define PL_HPP
 
-#include <vector>
-#include <initializer_list>
+  #include <initializer_list>
+  #include <vector>
 
 template <typename T>
 struct __pl_list {
@@ -23,7 +23,7 @@ struct __pl_list {
   const std::vector<T>& get_entries() const { return entries; }
 };
 
-#define pl(type, ...) __pl_list<type>({ __VA_ARGS__ })
-#define PL pl
+  #define pl(type, ...) __pl_list<type>({__VA_ARGS__})
+  #define PL pl
 
 #endif // PL_HPP
